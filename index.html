@@ -95,16 +95,30 @@ max: 121.11 ₽ (Сахар Rioba свекловичный белый песок
 
 <div class="footer" style="margin-top: 100px;">
 <hr>
-<small><em id="footerQuote">Здесь должна быть цитата с <a href="https://forismatic.com/ru/">forismatic.com</a></em></iframe></small>
+<small><em id="quote">Здесь должна была быть цитата с <a href="https://quotable.io/">quotable.io</a>, но что-то пошло не так</em></iframe></small>
 </div>
 
 <script>
 var footerQuote = document.getElementById('footerQuote');
-fetch('https://api.forismatic.com/api/1.0/?method=getQuote&format=text&lang=ru', {
-    method: 'POST'
-})
-.then(response => response.json())
-.then(response => footerQuote.innerHTML = response)
+document.addEventListener("DOMContentLoaded", () => {
+  // DOM elements
+  const quote = document.getElementById('quote');
+
+  async function updateQuote() {
+    // Fetch a random quote from the Quotable API
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    if (response.ok) {
+      // Update DOM elements
+      quote.innerHTML = `${data.content}<br> — ${data.author}`;
+    } else {
+      quote.textContent = 'Здесь должна была быть цитата с <a href="https://quotable.io/">quotable.io</a>, но что-то пошло не так';
+    }
+  }
+
+  // call updateQuote once when page loads
+  updateQuote();
+});
 </script>
 </body>
 </html>
