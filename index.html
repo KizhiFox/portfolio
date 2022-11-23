@@ -95,7 +95,16 @@ max: 121.11 ₽ (Сахар Rioba свекловичный белый песок
 
 <div class="footer" style="margin-top: 100px;">
 <hr>
+<small><em id="footerQuote">Здесь должна быть цитата с <a href="https://forismatic.com/ru/">forismatic.com</a></em></iframe></small>
 </div>
 
+<script>
+var footerQuote = document.getElementById('footerQuote');
+fetch('https://api.forismatic.com/api/1.0/?method=getQuote&format=text&lang=ru', {
+    method: 'POST'
+})
+.then(response => response.json())
+.then(response => footerQuote.innerHTML = response)
+</script>
 </body>
 </html>
