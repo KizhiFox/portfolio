@@ -9,7 +9,8 @@
 
 <body>
 
-<h1>Портфолио (или что-то навроде него)</h1>
+<h1>Портфолио</h1>
+<h3>Или что-то навроде него. Подборка интересных проектов выходного дня</h3>
 <table>
 <tr>
 <td><img alt="Fox avatar" src="avatar.png" class="avatar"></td>
@@ -30,13 +31,12 @@
 <b>Интересные проекты:</b><br>
 <ul>
 <li><a href="#token-sheet-generator">Генератор листов с токенами для настольных ролёвок</a><br></li>
+<li><a href="#sql-injection-playground-v2">Тестовая площадка для изучения SQL инъекций</a></li>
 <li><a href="#practice-in-here">Набор парсеров геоданных</a></li>
 <li><a href="#cyberpunk2020-cybecnetics-monitor">ПсевдоGUI редактор имплантов для НРИ Cyberpunk 2020</a></li>
 <li><a href="#dnd-shard-wiki">Справочник по миру D&D на самописном генераторе статических сайтов</a></li>
 <li><a href="#mastodon-nickname-clock">Часы в юзернейме Mastodon</a></li>
 <li><a href="#sugar-tracker">Трекер цены на сахар (привет, весна 2022)</a></li>
-<li><a href="#sql-injection-playground">Тестовая площадка для изучения SQL инъекций</a></li>
-<li><a href="#dnd-club-backend">Backend для сайта местного ролевого клуба (work in progress)</a></li>
 </ul>
 </div>
 
@@ -46,15 +46,21 @@
 <img alt="GitHub icon" src="github-icon.png" class="inline-icon"> <a href="https://github.com/KizhiFox/token-sheet-generator">github.com/KizhiFox/token-sheet-generator</a>
 </div>
 <p>Как это выглядит:</p>
-<a href="https://github.com/KizhiFox/token-sheet-generator/raw/main/screenshotv1_0.png"><img alt="Screenshot" src="https://github.com/KizhiFox/token-sheet-generator/raw/main/screenshotv1_0.png"></a>
+<a href="https://github.com/KizhiFox/token-sheet-generator/raw/main/screenshotApp.png"><img alt="Screenshot" src="https://github.com/KizhiFox/token-sheet-generator/raw/main/screenshotApp.png"></a>
 <p>Вывод PDF:</p>
 <a href="https://raw.githubusercontent.com/KizhiFox/token-sheet-generator/main/screenshotPDF.png"><img alt="Screenshot" src="https://raw.githubusercontent.com/KizhiFox/token-sheet-generator/main/screenshotPDF.png"></a>
+
+<h2><a id="sql-injection-playground-v2" href="#sql-injection-playground-v2">Тестовая площадка для изучения SQL инъекций</a></h2>
+<p>Сервер на FastAPI+SQLite с дырой в безопасности. Сделан для знакомого из университета, которому нужно было учить студентов информационной безопасности.</p>
+<p><img alt="GitHub icon" src="github-icon.png" class="inline-icon"> <a href="https://github.com/KizhiFox/sql-injection-playground-v2">github.com/KizhiFox/sql-injection-playground-v2</a></p>
+<p>Пример взлома инъекцией в адресной строке:</p>
+<a href="https://raw.githubusercontent.com/KizhiFox/sql-injection-playground-v2/main/sql_injection_example.png"><img alt="Screenshot" src="https://raw.githubusercontent.com/KizhiFox/sql-injection-playground-v2/main/sql_injection_example.png"></a>
 
 <h2><a id="practice-in-here" href="#practice-in-here">Набор парсеров геоданных</a></h2>
 <p>Парсеры геоданных местоположения нескольких магазинов, сделанные во время прохождения университетской практики в <a href="https://www.here.com/">HERE</a>. Вытаскивают данные с сайтов, сохраняют в GeoJSON.</p>
 <p><img alt="GitHub icon" src="github-icon.png" class="inline-icon"> <a href="https://github.com/KizhiFox/practice-in-here">github.com/KizhiFox/practice-in-here</a></p>
 <p>Пример распарсенных данных:</p>
-<iframe width="100%" height="550px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/ru/map/petrovich-geojson_837465?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
+<a href="https://github.com/KizhiFox/practice-in-here/blob/main/petrovich/points.geojson"><img alt="Map" src="https://raw.githubusercontent.com/KizhiFox/practice-in-here/main/petrovich/geojson.png"></a>
 
 <h2><a id="cyberpunk2020-cybecnetics-monitor" href="#cyberpunk2020-cybecnetics-monitor">ПсевдоGUI редактор имплантов для НРИ Cyberpunk 2020</a></h2>
 <p>Позволяет отслеживать и редактировать список имплантов в настольной ролевой игре <a href="https://ru.wikipedia.org/wiki/Cyberpunk_2020">Cyberpunk 2020</a>. Когда таблички на листе уже мало :)</p>
@@ -108,21 +114,6 @@ max: 121.11 ₽ (Сахар Rioba свекловичный белый песок
     "source": "https://sbermegamarket.ru/catalog/sahar/"
 }
 </pre>
-
-<h2><a id="sql-injection-playground" href="#sql-injection-playground">Тестовая площадка для изучения SQL инъекций</a></h2>
-<p>Одностраничный сервер на Python3+SQLite, написанный с использованием только стандартной библиотеки Python. Сделан для знакомого из университета, которому нужно было учить студентов информационной безопасности. Намеренно использует bad practice, чтобы было легко взламывать.</p>
-<p><img alt="GitHub icon" src="github-icon.png" class="inline-icon"> <a href="https://github.com/KizhiFox/sql-injection-playground">github.com/KizhiFox/sql-injection-playground</a></p>
-<p>Пример взлома инъекцией в адресной строке:</p>
-<a href="https://raw.githubusercontent.com/KizhiFox/sql-injection-playground/main/sql_injection_example.png"><img alt="Screenshot" src="https://raw.githubusercontent.com/KizhiFox/sql-injection-playground/main/sql_injection_example.png"></a>
-
-<h2><a id="dnd-club-backend" href="#dnd-club-backend">Backend для сайта местного ролевого клуба (work in progress)</a></h2>
-<p>Бэк на FastAPI для местного клуба НРИ. Делается в основном ради галочки в портфолио, т.к. все планируемые к реализации инструменты уже существуют, поэтому делается медленно. Но оно есть, я умею в FastAPI :)</p>
-<p><img alt="GitHub icon" src="github-icon.png" class="inline-icon"> <a href="https://github.com/KizhiFox/dnd-club-backend">github.com/KizhiFox/dnd-club-backend</a></p>
-
-<div class="footer" style="margin-top: 100px;">
-<hr>
-<small><em id="quote" style="color: #666666;">Здесь должна была быть цитата с <a href="https://quotable.io/">quotable.io</a>, но что-то пошло не так</em></iframe></small>
-</div>
 
 <script>
 var footerQuote = document.getElementById('footerQuote');
